@@ -1,0 +1,139 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-04-26T06:32:20.879Z",
+    "end": "2022-04-26T06:32:21.030Z",
+    "duration": 151,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3b0925e5-289c-45f4-8261-c55e6cf42cf5",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0dcc9077-caf5-4910-bf7f-3080b2f61f6d",
+          "title": "API READ - Shift Dokter PK",
+          "fullFile": "D:\\WMI\\Testing\\adamlis_backend\\DataMaster\\test\\shift-dokter-pk.js",
+          "file": "\\test\\shift-dokter-pk.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Scenario #Z28 - read data with normal case",
+              "fullTitle": "API READ - Shift Dokter PK Scenario #Z28 - read data with normal case",
+              "timedOut": false,
+              "duration": 98,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return request\n    .get('api/v1/shift_dokter_pk/read?nama=&page_size=10&page=0')\n    .then((res) => {\n        expect(res.body.code).to.eq(200);\n        expect(res.body.success).to.eq(true);\n        expect(res.body.message).to.equal('Read data berhasil');\n        expect(res.body.payload).to.have.lengthOf(6);\n    })",
+              "err": {},
+              "uuid": "39716dd9-a7bf-4bc8-8228-e0b8d9d70620",
+              "parentUUID": "0dcc9077-caf5-4910-bf7f-3080b2f61f6d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "39716dd9-a7bf-4bc8-8228-e0b8d9d70620"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 98,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "40a02348-cbfb-4e20-940e-626cf349370a",
+          "title": "API READ ACTIVE - Shift Dokter PK",
+          "fullFile": "D:\\WMI\\Testing\\adamlis_backend\\DataMaster\\test\\shift-dokter-pk.js",
+          "file": "\\test\\shift-dokter-pk.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Scenario #Z29 - read data active with normal case",
+              "fullTitle": "API READ ACTIVE - Shift Dokter PK Scenario #Z29 - read data active with normal case",
+              "timedOut": false,
+              "duration": 15,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return request\n    .get('api/v1/shift_dokter_pk_aktif/read?nama=&page_size=10&page=0')\n    .then((res) => {\n        expect(res.body.code).to.eq(200);\n        expect(res.body.success).to.eq(true);\n        expect(res.body.message).to.equal('Read data berhasil');\n        expect(res.body.payload).to.have.lengthOf(5);\n    })",
+              "err": {},
+              "uuid": "31f1fe31-ee7e-4ac7-a898-27883fad74a0",
+              "parentUUID": "40a02348-cbfb-4e20-940e-626cf349370a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "31f1fe31-ee7e-4ac7-a898-27883fad74a0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.0.1"
+    }
+  }
+}

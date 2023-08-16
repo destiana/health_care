@@ -1,0 +1,5 @@
+node_modules/
+.env
+# tes
+# Config/config.js
+package-lock.json
