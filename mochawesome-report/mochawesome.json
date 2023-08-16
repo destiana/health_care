@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 2,
-    "passes": 2,
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-26T06:32:20.879Z",
-    "end": "2022-04-26T06:32:21.030Z",
-    "duration": 151,
-    "testsRegistered": 2,
+    "start": "2023-08-16T04:59:54.683Z",
+    "end": "2023-08-16T04:59:54.841Z",
+    "duration": 158,
+    "testsRegistered": 7,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,88 +18,163 @@
   },
   "results": [
     {
-      "uuid": "3b0925e5-289c-45f4-8261-c55e6cf42cf5",
+      "uuid": "582b4a9c-c754-4b50-8413-7c93df4ed17e",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "/Users/macbookpro2017/Downloads/transaction_product/transaction_product/test/testing.js",
+      "file": "/test/testing.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "0dcc9077-caf5-4910-bf7f-3080b2f61f6d",
-          "title": "API READ - Shift Dokter PK",
-          "fullFile": "D:\\WMI\\Testing\\adamlis_backend\\DataMaster\\test\\shift-dokter-pk.js",
-          "file": "\\test\\shift-dokter-pk.js",
+          "uuid": "bebbe55d-5ce5-4944-a07c-6d9685f0c3d5",
+          "title": "API TEST HEALTHCARE",
+          "fullFile": "/Users/macbookpro2017/Downloads/transaction_product/transaction_product/test/testing.js",
+          "file": "/test/testing.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Scenario #Z28 - read data with normal case",
-              "fullTitle": "API READ - Shift Dokter PK Scenario #Z28 - read data with normal case",
+              "title": "CREATE CUSTOMER",
+              "fullTitle": "API TEST HEALTHCARE CREATE CUSTOMER",
               "timedOut": false,
-              "duration": 98,
+              "duration": 53,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "return request\n    .get('api/v1/shift_dokter_pk/read?nama=&page_size=10&page=0')\n    .then((res) => {\n        expect(res.body.code).to.eq(200);\n        expect(res.body.success).to.eq(true);\n        expect(res.body.message).to.equal('Read data berhasil');\n        expect(res.body.payload).to.have.lengthOf(6);\n    })",
+              "code": "const data = {\n    customer_name: 'nisak destiana'\n};\n    \nreturn request\n    .post('customer/create')\n    .send(data)\n    .then((res) => {\n        expect(res.status).to.eq(200);\n        expect(res.ok).to.eq(true);\n    });",
               "err": {},
-              "uuid": "39716dd9-a7bf-4bc8-8228-e0b8d9d70620",
-              "parentUUID": "0dcc9077-caf5-4910-bf7f-3080b2f61f6d",
+              "uuid": "895264cc-3b3e-4c42-97bf-d216e8274c79",
+              "parentUUID": "bebbe55d-5ce5-4944-a07c-6d9685f0c3d5",
               "isHook": false,
               "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "39716dd9-a7bf-4bc8-8228-e0b8d9d70620"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 98,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 5000
-        },
-        {
-          "uuid": "40a02348-cbfb-4e20-940e-626cf349370a",
-          "title": "API READ ACTIVE - Shift Dokter PK",
-          "fullFile": "D:\\WMI\\Testing\\adamlis_backend\\DataMaster\\test\\shift-dokter-pk.js",
-          "file": "\\test\\shift-dokter-pk.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
+            },
             {
-              "title": "Scenario #Z29 - read data active with normal case",
-              "fullTitle": "API READ ACTIVE - Shift Dokter PK Scenario #Z29 - read data active with normal case",
+              "title": "CREATE CUSTOMER ADDRESS",
+              "fullTitle": "API TEST HEALTHCARE CREATE CUSTOMER ADDRESS",
               "timedOut": false,
-              "duration": 15,
+              "duration": 18,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "return request\n    .get('api/v1/shift_dokter_pk_aktif/read?nama=&page_size=10&page=0')\n    .then((res) => {\n        expect(res.body.code).to.eq(200);\n        expect(res.body.success).to.eq(true);\n        expect(res.body.message).to.equal('Read data berhasil');\n        expect(res.body.payload).to.have.lengthOf(5);\n    })",
+              "code": "const data = {\n    address: 'jakarta',\n    customer_id: 1,\n};\n    \nreturn request\n    .post('customer_address/create')\n    .send(data)\n    .then((res) => {\n        expect(res.status).to.eq(200);\n        expect(res.ok).to.eq(true);\n    });",
               "err": {},
-              "uuid": "31f1fe31-ee7e-4ac7-a898-27883fad74a0",
-              "parentUUID": "40a02348-cbfb-4e20-940e-626cf349370a",
+              "uuid": "e68c2467-4224-415c-a3e4-265318f00d5b",
+              "parentUUID": "bebbe55d-5ce5-4944-a07c-6d9685f0c3d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CREATE PAYMENT METHOD",
+              "fullTitle": "API TEST HEALTHCARE CREATE PAYMENT METHOD",
+              "timedOut": false,
+              "duration": 9,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const data = {\n    name: 'E-WALLET',\n    is_active: true,\n};\n    \nreturn request\n    .post('payment_method/create')\n    .send(data)\n    .then((res) => {\n        expect(res.status).to.eq(200);\n        expect(res.ok).to.eq(true);\n    });",
+              "err": {},
+              "uuid": "7cf37c4b-314c-4133-b074-2df851ae0f13",
+              "parentUUID": "bebbe55d-5ce5-4944-a07c-6d9685f0c3d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CREATE PRODUCTS",
+              "fullTitle": "API TEST HEALTHCARE CREATE PRODUCTS",
+              "timedOut": false,
+              "duration": 8,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const data = {\n    name: 'sikat gigi',\n    price: 3000,\n};\n    \nreturn request\n    .post('product/create')\n    .send(data)\n    .then((res) => {\n        expect(res.status).to.eq(200);\n        expect(res.ok).to.eq(true);\n    });",
+              "err": {},
+              "uuid": "03000bcd-5c96-4ae3-812d-638965f6deb7",
+              "parentUUID": "bebbe55d-5ce5-4944-a07c-6d9685f0c3d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CREATE TRANSACTION",
+              "fullTitle": "API TEST HEALTHCARE CREATE TRANSACTION",
+              "timedOut": false,
+              "duration": 29,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const data ={ \ntransaction_date : '2023-08-13 18:00:00',\ncustomer_id : 1,\ncustomer_address_id : 1\n\n    };\n    \n   return request\n         .post('transaction/create')\n         .send(data)\n         .then((res) => {\nexpect(res.status).to.eq(200);\nexpect(res.ok).to.eq(true);\n         });",
+              "err": {},
+              "uuid": "3ae82304-1718-4d61-8567-f041381dd2f7",
+              "parentUUID": "bebbe55d-5ce5-4944-a07c-6d9685f0c3d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CREATE TRANSACTION PAYMENT",
+              "fullTitle": "API TEST HEALTHCARE CREATE TRANSACTION PAYMENT",
+              "timedOut": false,
+              "duration": 7,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const data = {\n    transaction_id: 2,\n    payment_method_id : 3\n};\n    \nreturn request\n    .post('transaction_payment/create')\n    .send(data)\n    .then((res) => {\n        expect(res.status).to.eq(200);\n        expect(res.ok).to.eq(true);\n    });",
+              "err": {},
+              "uuid": "db07420c-d85a-4072-9a2b-243a5f1f2d66",
+              "parentUUID": "bebbe55d-5ce5-4944-a07c-6d9685f0c3d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CREATE TRANSACTION PRODUCT",
+              "fullTitle": "API TEST HEALTHCARE CREATE TRANSACTION PRODUCT",
+              "timedOut": false,
+              "duration": 12,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const data = {\n    transaction_id: 2,\n    product_id : 5\n};\n    \nreturn request\n    .post('transaction_product/create')\n    .send(data)\n    .then((res) => {\n        expect(res.status).to.eq(200);\n        expect(res.ok).to.eq(true);\n    });",
+              "err": {},
+              "uuid": "1a71c29d-7a3a-40ed-8b18-2b2db9f7507a",
+              "parentUUID": "bebbe55d-5ce5-4944-a07c-6d9685f0c3d5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "31f1fe31-ee7e-4ac7-a898-27883fad74a0"
+            "895264cc-3b3e-4c42-97bf-d216e8274c79",
+            "e68c2467-4224-415c-a3e4-265318f00d5b",
+            "7cf37c4b-314c-4133-b074-2df851ae0f13",
+            "03000bcd-5c96-4ae3-812d-638965f6deb7",
+            "3ae82304-1718-4d61-8567-f041381dd2f7",
+            "db07420c-d85a-4072-9a2b-243a5f1f2d66",
+            "1a71c29d-7a3a-40ed-8b18-2b2db9f7507a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 15,
+          "duration": 136,
           "root": false,
           "rootEmpty": false,
           "_timeout": 5000
@@ -117,7 +192,7 @@
   ],
   "meta": {
     "mocha": {
-      "version": "9.1.3"
+      "version": "9.2.2"
     },
     "mochawesome": {
       "options": {
@@ -129,11 +204,11 @@
         "useInlineDiffs": false,
         "code": true
       },
-      "version": "7.0.1"
+      "version": "7.1.3"
     },
     "marge": {
       "options": null,
-      "version": "6.0.1"
+      "version": "6.2.0"
     }
   }
 }

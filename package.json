@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
-    "test": "mocha test/shift-dokter-pk --timeout 5000 --reporter mochawesome"
+    "test": "mocha test/testing --timeout 5000 --reporter mochawesome"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.16.0",

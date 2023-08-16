@@ -1,0 +1,1155 @@
+{
+	"info": {
+		"_postman_id": "bf66aadc-c071-45bf-802c-b5d35ec84417",
+		"name": "API_NISA_TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6825753"
+	},
+	"item": [
+		{
+			"name": "CustomerAddress",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"data_tester\",\n    \"kode\": \"TEST\",\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{htttp_server_sinabung}}:3000/api/v1/jenis_penjamin/create",
+							"host": [
+								"{{htttp_server_sinabung}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwicm9sZXMiOiJTdXBlciBBZG1pbiIsImtvZGVfcnMiOm51bGwsImtvZGVfbGFiIjpudWxsLCJpYXQiOjE2NjkyODM4MDgsImV4cCI6MTY2OTM3MDIwOH0.udIJfFrgnpezd0-ax1KZRnZNElz4OpQoDHJlpc6we30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{http_gateway}}/datamaster/jenis_penjamin/read?page=0&page_size=10&nama=umum&kode_rs=RSGT&kode_lab=LAB_PK",
+							"host": [
+								"{{http_gateway}}"
+							],
+							"path": [
+								"datamaster",
+								"jenis_penjamin",
+								"read"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								},
+								{
+									"key": "nama",
+									"value": "umum"
+								},
+								{
+									"key": "kode_rs",
+									"value": "RSGT"
+								},
+								{
+									"key": "kode_lab",
+									"value": "LAB_PK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{http}}/jenis_penjamin_aktif/read?nama&kode_rs=&kode_lab=",
+							"host": [
+								"{{http}}"
+							],
+							"path": [
+								"jenis_penjamin_aktif",
+								"read"
+							],
+							"query": [
+								{
+									"key": "nama",
+									"value": null
+								},
+								{
+									"key": "kode_rs",
+									"value": ""
+								},
+								{
+									"key": "kode_lab",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"testai\",\n    \"kode\": \"testai\",\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.100.50:3300/api/v1/jenis_penjamin/edit?id=6",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"50"
+							],
+							"port": "3300",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"data_tester\",\n    \"kode\": \"TEST\",\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{htttp_server_sinabung}}:3000/api/v1/jenis_penjamin/create",
+							"host": [
+								"{{htttp_server_sinabung}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwicm9sZXMiOiJTdXBlciBBZG1pbiIsImtvZGVfcnMiOm51bGwsImtvZGVfbGFiIjpudWxsLCJpYXQiOjE2NjkyODM4MDgsImV4cCI6MTY2OTM3MDIwOH0.udIJfFrgnpezd0-ax1KZRnZNElz4OpQoDHJlpc6we30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{http_gateway}}/datamaster/jenis_penjamin/read?page=0&page_size=10&nama=umum&kode_rs=RSGT&kode_lab=LAB_PK",
+							"host": [
+								"{{http_gateway}}"
+							],
+							"path": [
+								"datamaster",
+								"jenis_penjamin",
+								"read"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								},
+								{
+									"key": "nama",
+									"value": "umum"
+								},
+								{
+									"key": "kode_rs",
+									"value": "RSGT"
+								},
+								{
+									"key": "kode_lab",
+									"value": "LAB_PK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{http}}/jenis_penjamin_aktif/read?nama&kode_rs=&kode_lab=",
+							"host": [
+								"{{http}}"
+							],
+							"path": [
+								"jenis_penjamin_aktif",
+								"read"
+							],
+							"query": [
+								{
+									"key": "nama",
+									"value": null
+								},
+								{
+									"key": "kode_rs",
+									"value": ""
+								},
+								{
+									"key": "kode_lab",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"testai\",\n    \"kode\": \"testai\",\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.100.50:3300/api/v1/jenis_penjamin/edit?id=6",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"50"
+							],
+							"port": "3300",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"angka\",\n    \"price\": 3008\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:80/api/product/create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"product",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwicm9sZXMiOiJTdXBlciBBZG1pbiIsImtvZGVfcnMiOm51bGwsImtvZGVfbGFiIjpudWxsLCJpYXQiOjE2NjkyODM4MDgsImV4cCI6MTY2OTM3MDIwOH0.udIJfFrgnpezd0-ax1KZRnZNElz4OpQoDHJlpc6we30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{http_gateway}}/datamaster/jenis_penjamin/read?page=0&page_size=10&nama=umum&kode_rs=RSGT&kode_lab=LAB_PK",
+							"host": [
+								"{{http_gateway}}"
+							],
+							"path": [
+								"datamaster",
+								"jenis_penjamin",
+								"read"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								},
+								{
+									"key": "nama",
+									"value": "umum"
+								},
+								{
+									"key": "kode_rs",
+									"value": "RSGT"
+								},
+								{
+									"key": "kode_lab",
+									"value": "LAB_PK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:80/api/product/delete?id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"product",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"testai\",\n    \"kode\": \"testai\",\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.100.50:3300/api/v1/jenis_penjamin/edit?id=6",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"50"
+							],
+							"port": "3300",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaymentMethod",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"data_tester\",\n    \"kode\": \"TEST\",\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{htttp_server_sinabung}}:3000/api/v1/jenis_penjamin/create",
+							"host": [
+								"{{htttp_server_sinabung}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwicm9sZXMiOiJTdXBlciBBZG1pbiIsImtvZGVfcnMiOm51bGwsImtvZGVfbGFiIjpudWxsLCJpYXQiOjE2NjkyODM4MDgsImV4cCI6MTY2OTM3MDIwOH0.udIJfFrgnpezd0-ax1KZRnZNElz4OpQoDHJlpc6we30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{http_gateway}}/datamaster/jenis_penjamin/read?page=0&page_size=10&nama=umum&kode_rs=RSGT&kode_lab=LAB_PK",
+							"host": [
+								"{{http_gateway}}"
+							],
+							"path": [
+								"datamaster",
+								"jenis_penjamin",
+								"read"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								},
+								{
+									"key": "nama",
+									"value": "umum"
+								},
+								{
+									"key": "kode_rs",
+									"value": "RSGT"
+								},
+								{
+									"key": "kode_lab",
+									"value": "LAB_PK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{http}}/jenis_penjamin_aktif/read?nama&kode_rs=&kode_lab=",
+							"host": [
+								"{{http}}"
+							],
+							"path": [
+								"jenis_penjamin_aktif",
+								"read"
+							],
+							"query": [
+								{
+									"key": "nama",
+									"value": null
+								},
+								{
+									"key": "kode_rs",
+									"value": ""
+								},
+								{
+									"key": "kode_lab",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"testai\",\n    \"kode\": \"testai\",\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.100.50:3300/api/v1/jenis_penjamin/edit?id=6",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"50"
+							],
+							"port": "3300",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"data_tester\",\n    \"kode\": \"TEST\",\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{htttp_server_sinabung}}:3000/api/v1/jenis_penjamin/create",
+							"host": [
+								"{{htttp_server_sinabung}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwicm9sZXMiOiJTdXBlciBBZG1pbiIsImtvZGVfcnMiOm51bGwsImtvZGVfbGFiIjpudWxsLCJpYXQiOjE2NjkyODM4MDgsImV4cCI6MTY2OTM3MDIwOH0.udIJfFrgnpezd0-ax1KZRnZNElz4OpQoDHJlpc6we30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{http_gateway}}/datamaster/jenis_penjamin/read?page=0&page_size=10&nama=umum&kode_rs=RSGT&kode_lab=LAB_PK",
+							"host": [
+								"{{http_gateway}}"
+							],
+							"path": [
+								"datamaster",
+								"jenis_penjamin",
+								"read"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								},
+								{
+									"key": "nama",
+									"value": "umum"
+								},
+								{
+									"key": "kode_rs",
+									"value": "RSGT"
+								},
+								{
+									"key": "kode_lab",
+									"value": "LAB_PK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{http}}/jenis_penjamin_aktif/read?nama&kode_rs=&kode_lab=",
+							"host": [
+								"{{http}}"
+							],
+							"path": [
+								"jenis_penjamin_aktif",
+								"read"
+							],
+							"query": [
+								{
+									"key": "nama",
+									"value": null
+								},
+								{
+									"key": "kode_rs",
+									"value": ""
+								},
+								{
+									"key": "kode_lab",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"testai\",\n    \"kode\": \"testai\",\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.100.50:3300/api/v1/jenis_penjamin/edit?id=6",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"50"
+							],
+							"port": "3300",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TransactionPayment",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"data_tester\",\n    \"kode\": \"TEST\",\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{htttp_server_sinabung}}:3000/api/v1/jenis_penjamin/create",
+							"host": [
+								"{{htttp_server_sinabung}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwicm9sZXMiOiJTdXBlciBBZG1pbiIsImtvZGVfcnMiOm51bGwsImtvZGVfbGFiIjpudWxsLCJpYXQiOjE2NjkyODM4MDgsImV4cCI6MTY2OTM3MDIwOH0.udIJfFrgnpezd0-ax1KZRnZNElz4OpQoDHJlpc6we30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{http_gateway}}/datamaster/jenis_penjamin/read?page=0&page_size=10&nama=umum&kode_rs=RSGT&kode_lab=LAB_PK",
+							"host": [
+								"{{http_gateway}}"
+							],
+							"path": [
+								"datamaster",
+								"jenis_penjamin",
+								"read"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								},
+								{
+									"key": "nama",
+									"value": "umum"
+								},
+								{
+									"key": "kode_rs",
+									"value": "RSGT"
+								},
+								{
+									"key": "kode_lab",
+									"value": "LAB_PK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:80/api/transaction_payment/delete?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"transaction_payment",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"testai\",\n    \"kode\": \"testai\",\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.100.50:3300/api/v1/jenis_penjamin/edit?id=6",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"50"
+							],
+							"port": "3300",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TransactionProduct",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"data_tester\",\n    \"kode\": \"TEST\",\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{htttp_server_sinabung}}:3000/api/v1/jenis_penjamin/create",
+							"host": [
+								"{{htttp_server_sinabung}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwicm9sZXMiOiJTdXBlciBBZG1pbiIsImtvZGVfcnMiOm51bGwsImtvZGVfbGFiIjpudWxsLCJpYXQiOjE2NjkyODM4MDgsImV4cCI6MTY2OTM3MDIwOH0.udIJfFrgnpezd0-ax1KZRnZNElz4OpQoDHJlpc6we30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:80/api/transaction_product/read?page=0&page_size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"transaction_product",
+								"read"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:80/api/transaction_product/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"transaction_product",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"testai\",\n    \"kode\": \"testai\",\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.100.50:3300/api/v1/jenis_penjamin/edit?id=6",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"50"
+							],
+							"port": "3300",
+							"path": [
+								"api",
+								"v1",
+								"jenis_penjamin",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
